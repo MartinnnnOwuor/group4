@@ -1,10 +1,41 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-class Login extends Component {
-  state = { email: "", password: "", message: "" };
-  render() {
+function Login()  {
+  const [logins, setLogins] = useState({ email: "", password: "", message: "" });
+  const nav = useNavigate()
+
+  async function handleLogin () {
+    nav("/shopping")
+    let response = await fetch(
+      `https://react-server-k2ig.onrender.com/users?email=${logins.email}&password=${logins.password}`,
+      { method: "GET" }
+    );
+
+    let body = await response.json();
+    console.log (body);
+
+    if (body.length > 0) {
+      //if success
+      
+      setLogins({
+        message: <span className="text-success">Login successful</span>,
+      });
+    } else {
+      //if  error
+      setLogins({
+        message: (
+          <span className="text-danger">
+            Login Unsuccessful, please try again
+          </span>
+        ),
+      });
+    }
+  };
+
+   
     return (
-      <div className="col-lg-9 m-3 p-2">
+      <div className="col-lg-9 m-3 p-2" >
         <h4 className="border-bottom">Log-in</h4>
 
         {/* Beginning of the Email */}
@@ -13,9 +44,9 @@ class Login extends Component {
           <input
             type="text"
             className="form-control"
-            value={this.state.email}
+            value={logins.email}
             onChange={(event) => {
-              this.setState({ email: event.target.value });
+              setLogins({ email: event.target.value });
             }}
           />
         </div>
@@ -27,18 +58,18 @@ class Login extends Component {
           <input
             type="password"
             className="form-control"
-            value={this.state.password}
+            value={logins.password}
             onChange={(event) => {
-              this.setState({ password: event.target.value });
+              setLogins({ password: event.target.value });
             }}
           />
         </div>
         {/* End of Password */}
 
         <div className="d-flex justify-content-end">
-          <span className="m-3 ">{this.state.message}</span>
+          <span className="m-3 ">{logins.message}</span>
 
-          <button className="btn btn-primary m-2" onClick={this.onLoginClick}>
+          <button className="btn btn-primary m-2" onClick={() => {handleLogin()}}>
             Login
           </button>
         </div>
@@ -47,33 +78,6 @@ class Login extends Component {
   }
 
   //Fires when user clicks on Login button
-  onLoginClick = async () => {
-    console.log(this.state);
-
-    let response = await fetch(
-      `http://localhost:5000/users?email=${this.state.email}&password=${this.state.password}`,
-      { method: "GET" }
-    );
-
-    let body = await response.json();
-    console.log (body);
-
-    if (body.length > 0) {
-      //if success
-      this.setState({
-        message: <span className="text-success">Login successful</span>,
-      });
-    } else {
-      //if  error
-      this.setState({
-        message: (
-          <span className="text-danger">
-            Login Unsuccessful, please try again
-          </span>
-        ),
-      });
-    }
-  };
-}
+  
 
 export default Login;

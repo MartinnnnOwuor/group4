@@ -1,131 +1,81 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Product from "./Product";
 
-class ShoppingCart extends Component {
-  constructor(props) {
-    console.log("constructor-ShoppingCart");
-    //Executes when the component is mounted;
-    //Initializes the state;
-    //For this to work call super class constructor;
+const ShoppingCart = () => {
+  const [products, setProducts] = useState([]);
 
-    super(props);
-    this.state = {
-      products: [],
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://react-server-k2ig.onrender.com/products");
+        const responseData = await response.json();
+        setProducts(responseData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
-  }
 
-  render() {
-    console.log("render-ShoppingCart");
+    fetchData();
 
-    return (
-      <div className="container-fluid">
-        <h4>Shopping #Kart</h4>
+    return () => {
+      console.log("componentWillUnmount - ShoppingCart");
+    };
+  }, []);
 
-        <div className="row">
-          {this.state.products.map((item) => {
-            return (
-              <Product
-                key={item.id}
-                product={item}
-                onIncrement={this.handleIncrement}
-                onDecrement={this.handleDecrement}
-                onDelete={this.handleDelete}
-              >
-                <button className="btn btn-primary">Purchase</button>
-              </Product>
-            );
-          })}
-        </div>
-      </div>
+  const handleIncrement = (product, maxValue) => {
+    const updatedProducts = products.map((p) =>
+      p.id === product.id && p.quantity < maxValue
+        ? { ...p, quantity: p.quantity + 1 }
+        : p
     );
-  }
-
-  componentDidMount = async () => {
-    // Executes after constructor and render method (includes life cycle of child components, if any) of current component;
-    // Fetch data from data source;
-    let response = await fetch("http://localhost:5000/products", {
-      method: "GET",
-    });
-    let responseData = await response.json();
-
-    console.log(responseData);
-
-    this.setState({ products: responseData });
-    console.log("componentDidMount-ShoppingCart");
+    setProducts(updatedProducts);
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log(
-      "componentDidUpdate - ShopingCart",
-      prevProps,
-      prevState,
-      this.props,
-      this.tate
+  const handleDecrement = (product, minValue) => {
+    const updatedProducts = products.map((p) =>
+      p.id === product.id && p.quantity > minValue
+        ? { ...p, quantity: p.quantity - 1 }
+        : p
     );
-    // if (prevProps.x !== this.props.x) {
-    //   //make http call;
-    // }
-  }
-
-  componentWillUnmount() {
-    //Executes when the current instance of current component is being deleted from memory;
-    console.log("componentWillUnmount-ShoppingCart");
-  }
-
-  componentDidCatch(error, info) {
-    // console.log("componenDidCatch-ShoppingCart");
-    // console.log(error, info);
-
-    localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
-  }
-
-  //Fires when the user clicks on + button;
-  handleIncrement = (product, maxValue) => {
-    //Use of spread operator to clone the products object(state);
-    //Fetching index of selected list item;
-    const everyProduct = [...this.state.products];
-    const index = everyProduct.indexOf(product);
-
-    //Conditional if statement to check if less than maxValue then update the state;
-    if (everyProduct[index].quantity < maxValue) {
-      everyProduct[index].quantity++;
-    }
-
-    //Update the initial component (parent component) through setState;
-    this.setState({ products: everyProduct });
+    setProducts(updatedProducts);
   };
 
-  //Fires when user clicks on - button;
-  handleDecrement = (product, minValue) => {
-    //Employing the same method as above, just change the ++ to --;
-    //Fetching index of selected list item;
-    const everyProduct = [...this.state.products];
-    const index = everyProduct.indexOf(product);
-
-    //If current quantity of product is greater than minValue, decrease value and update the state;
-    if (everyProduct[index].quantity > minValue) {
-      everyProduct[index].quantity--;
-    }
-
-    //Update the initial component (parent component) through setState;
-    this.setState({ products: everyProduct });
-  };
-
-  //Creating a handleDelete event handler;
-  //Fires when user clicks on the Delete (X) button in the Product component;
-  handleDelete = (product) => {
-    //Fetching index of selected list item;
-    const everyProduct = [...this.state.products];
-    const index = everyProduct.indexOf(product);
-
+  const handleDelete = (product) => {
     if (window.confirm("Please confirm to Delete?")) {
-      //Delete product based on index;
-      everyProduct.splice(index, 1);
-
-      //Update the initial component (parent component) through setState;
-      this.setState({ products: everyProduct });
+      const updatedProducts = products.filter((p) => p.id !== product.id);
+      setProducts(updatedProducts);
     }
   };
-}
+  //function to handlepurchase button
+  const handlePurchase = (product) => {
+    if (window.confirm(`you've successfully purchased your product`)) {
+      const updatedProducts = products.map((p) =>
+         p.id !== product.id ? { ...p, purchased: true} : p
+    );
+      setProducts(updatedProducts);
+    }
+  };
+
+  return (
+    <div className="container-fluid" style={{background:'#cccc'}}>
+      <h4 style={{textAlign:'center', fontSize:'24px',padding:'7px'}}>Welcome to Shopping #Kart retail therapy at its finest</h4>
+      <p style={{textAlign:'center', fontSize:'18px', color:'blueviolet'}}>Bringing home a cart full of happiness</p>
+      <div className="row">
+        {products.map((item) => (
+          <Product
+            key={item.id}
+            product={item}
+            onIncrement={handleIncrement}
+            onDecrement={handleDecrement}
+            onDelete={handleDelete}
+            onPurchase={handlePurchase}
+          >
+            <button className="btn btn-primary" onClick={handlePurchase}>Purchase</button>
+          </Product>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default ShoppingCart;

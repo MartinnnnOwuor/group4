@@ -5,7 +5,7 @@ function Home() {
     <div id='homecomponent'>
     <div className="container" >
       <h1 id='karttitle'className="text-center">Welcome to e-Kart where quality products speak loud!</h1>
-      <div style={{marginLeft:'160px',color:'#9ACD32', fontWeight:'bold'}} >
+      <div style={{marginLeft:'100px',color:'#0000ff', fontWeight:'bold'}} >
        <h2 className="mt-5 mb-4">Why Shop with us?</h2>
             <ul>
               <li>Secure checkout process</li>
@@ -16,7 +16,7 @@ function Home() {
               </ul>
               </div>
 
-            <div style={{marginTop:'70px'}}>
+            <div style={{marginTop:'-50px', marginLeft:"890px", fontWeight:"bolder", color: "#ffff00"}}>
               <h2 className="mt-5 mb-4"> What makes it different?</h2>
                 <ul>
               <li>Usable with phone, tab or computer!!</li>
@@ -25,7 +25,8 @@ function Home() {
               <li>No redirects</li>
               </ul>
             </div>
-            <div >
+
+            <div style={{marginTop: "90px", color: "green", fontWeight: "bolder"}}>
             <h2 className="mt-5 mb-4">What if its a scam?</h2>
             <ul>
               <li>Secure payment via MPESA, Mastercard, paypall etc</li>

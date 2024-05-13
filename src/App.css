@@ -50,6 +50,7 @@
 
 .navbar-style {
   background-color: #0f235a !important;
+  margin-bottom:20px ;
 }
 #tog:hover{
   background-color: #0f172a;
@@ -67,4 +68,44 @@
 }
 #aboutcompo{
   background-color: #e9865f;
+}
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+h5 {
+  font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-transform: capitalize;
+   
+}
+#search-input{
+  width: 60%;
+  max-width: 400px;
+  padding: 20px 20px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 15px;
+  color: #333;
+}
+#search-button {
+  padding: 10px 20px;
+  background-color: #0404e6;
+  color: aliceblue;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+#search-button:hover{
+  background-color: #31e708;
 }

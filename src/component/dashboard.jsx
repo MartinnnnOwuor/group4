@@ -2,8 +2,14 @@ import React from 'react';
 
 function Dashboard() {
   return (
+
     <div className='container'>
-      <h5 className='text-center mt-3'>We deal with products of various varieties &#128515;</h5>
+      <form action="">
+        <input type="text" id ="search-input" placeholder="search for images" />
+        <button id="search-button">Search...</button>       
+    </form>
+    
+      <h5 >We deal with products of various varieties &#128515;</h5>
       <div className='row justify-content-center'>
         <div className='col-md-6'>
           <p className='text-center text-primary'>Tablets</p>

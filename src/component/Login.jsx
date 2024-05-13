@@ -42,7 +42,7 @@ function Login() {
   }
 
   return (
-    <div className="col-lg-9 m-3 p-2">
+    <div className="login">
       <h4 className="border-bottom">Log-in</h4>
 
       {/* Beginning of the Email */}

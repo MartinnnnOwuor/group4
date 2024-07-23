@@ -18,9 +18,10 @@ const About = () => {
           <h2 className="mt-5 mb-4">Contact Us</h2>
           <p>If you have any questions or concerns, please don't hesitate to get in touch with us:</p>
           <ul>
-            <li>Email: <a href='/#' style={{textDecoration:'none'}}>Ekart@company.com</a></li>
-            <li>Phone: <a href='/#'style={{textDecoration:'none'}}>123-456-7890</a></li>
-            <li>Address: <a href='/#'style={{textDecoration:'none'}}>123 Main Street, Nairobi, Kenya</a></li>
+            <li>Email: <a href='#' style={{textDecoration:'none'}}>Ekart@company.com</a></li>
+            <li>Phone: <a href='#'style={{textDecoration:'none'}}>123-456-7890</a></li>
+            <li>Address: <a href='#'style={{textDecoration:'none'}}>123 Main Street, Nairobi, Kenya</a></li>
+            
           </ul>
           </div>
         </div>

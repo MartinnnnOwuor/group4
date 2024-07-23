@@ -55,17 +55,18 @@
 #tog:hover {
   background-color: #0f172a;
 }
-#homecomponent {
-  background-image: url("https://plus.unsplash.com/premium_photo-1677852356095-51e64184cf25?w=1400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hvcHBpbmclMjBjYXJ0fGVufDB8fDB8fHww");
+#homecomponent{
+  background-image: url('https://plus.unsplash.com/premium_photo-1677852356095-51e64184cf25?w=1400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hvcHBpbmclMjBjYXJ0fGVufDB8fDB8fHww');
   background-size: cover;
   height: 100vh;
   position: relative;
   line-height: 1.6;
 }
-#karttitle {
+#karttitle{
   font-size: 40px;
   font-weight: bold;
 }
+
 #aboutcompo {
   background-color: #e9865f;
 }
@@ -135,7 +136,6 @@ h5 {
 }
 .login {
   margin-top: 120px;
-  margin-bottom: 60px;
   margin-left: 500px;
   margin-right: 500px;
   font-size: large;

@@ -7,7 +7,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style ">
         <div className="container-fluid">
         <a className="navbar-brand" href="/#">
-          #e-Kart
+          E-Kart
         </a>
 
         <button
@@ -25,7 +25,8 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-                <NavLink class='home' to='/home' style={{color:'white', textDecoration:'none', marginLeft:'700px'}}>
+                <NavLink class='home' to='/home' style={{color:'white', textDecoration:'none', marginLeft:'750px'}}>
+
                   Home
                 </NavLink>
             </li>

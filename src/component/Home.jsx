@@ -2,39 +2,33 @@ import React from 'react'
 
 function Home() {
   return (
-    <div id='homecomponent'>
-    <div className="container" >
-      <h1 id='karttitle'className="text-center">Welcome to e-Kart where quality products speak loud!</h1>
-      <div style={{marginLeft:'100px',color:'#0000ff', fontWeight:'bold'}} >
-       <h2 className="mt-5 mb-4">Why Shop with us?</h2>
-            <ul>
-              <li>Secure checkout process</li>
-              <li>Fast and reliable shipping</li>
-              <li>Easy returns and exchanges</li>
-              <li>Customer reviews and ratings</li>
-              <li>Responsive customer support</li>
-              </ul>
-              </div>
-
-            <div style={{marginTop:'-50px', marginLeft:"890px", fontWeight:"bolder", color: "#ffff00"}}>
-              <h2 className="mt-5 mb-4"> What makes it different?</h2>
-                <ul>
-              <li>Usable with phone, tab or computer!!</li>
-              <li>Global scope</li>
-              <li>Easy navigation</li>
-              <li>No redirects</li>
-              </ul>
+    <div className=''>
+      <div className='bg-blue-100'>
+        <div className='pt-10'>
+            <h1 className='text-center text-3xl font-bold'>Welcome to the Future of Accessories:</h1>
+            <h2 className='text-center text-3xl font-bold'>E-Kart Limited</h2>
+        </div>
+        <div className='bg-gray py-2'>
+            <div className='bg-blue-100 shadow-md rounded-xl mx-auto max-w-4xl p-6'>
+                <p className='text-center text-lg mb-2'>Our advanced solutions, from seamless payment processing to ecure transactions, streamline operations, enhance customer experiences, and drive growth.</p>
+                <p className='text-center text-lg'>As industry leaders, we redefine norms and push boundaries, shaping a future where technology transforms the shopping experience.</p>
             </div>
-
-            <div style={{marginTop: "90px", color: "green", fontWeight: "bolder"}}>
-            <h2 className="mt-5 mb-4">What if its a scam?</h2>
-            <ul>
-              <li>Secure payment via MPESA, Mastercard, paypall etc</li>
-              <li>Receipts after payment to showcase recent transactions</li>
-              <li>App under Copyright Protection Law</li>
-            </ul>
-            </div>
-    </div>
+        </div>
+        <div className='flex flex-col md:flex-row justify-center py-5'>
+            <button className='bg-blue-500 text-white hover:bg-blue-600 py-3 px-4 rounded-xl mx-4'>
+                Learn More
+            </button>
+            <button className='bg-black text-white py-3 rounded-xl px-4'>
+                Let's Talk
+            </button>
+        </div>
+      </div>
+      <div className=''>
+        <h3 className='text-center text-2xl pt-5 font-bold'>Solutions We Offer</h3>
+        <div className='shadow-xl flex flex-col md:flex-row space-4'>
+            <h1 className='text-lg'>Electronics</h1>
+        </div>
+      </div>
     </div>
   )
 }

@@ -12,7 +12,7 @@ function About() {
 
       <div className='row text-center'>
         <div className='col-md-6 mb-4'>
-          <div className='card shadow-lg border-0 rounded-lg'>
+          <div className='bg-indigo-200 card shadow-lg border-0 rounded-lg'>
             <div className='card-body'>
               <FontAwesomeIcon icon={faBullseye} size='3x' className='mb-3 text-success'/>
               <h3 className='card-title'>Mission</h3>

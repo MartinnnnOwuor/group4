@@ -6,8 +6,8 @@ function About() {
   return (
     <div className='container my-5'>
       <div className='text-center mb-5'>
-        <h2 className='text-lg font-bold'>Who We Are</h2>
-        <p>We are a dynamic team committed to providing you with unique accessories and a diverse range of high-quality products. Our mission is to make shopping a delightful experience with a focus on innovation and customer satisfaction.</p>
+        <h2 className='text-lg font-bold hover:text-green-400'>Who We Are</h2>
+        <p className='text-md'>We are a dynamic team committed to providing you with unique accessories and a diverse range of high-quality products. Our mission is to make shopping a delightful experience with a focus on innovation and customer satisfaction.</p>
       </div>
 
       <div className='row text-center'>

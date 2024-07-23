@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import './index.css'
 import Login from './component/Login'
 import Navbar from './component/Navbar'
 import Home from "./component/Home"
@@ -8,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import About from './component/About'
 import ShoppingCart from './component/ShoppingCart'
 import Dashboard from './component/dashboard'
+
 function App() {
   return (
     <BrowserRouter>

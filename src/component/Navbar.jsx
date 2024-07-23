@@ -52,9 +52,9 @@ function Navbar() {
           </NavLink>
           <NavLink
             className="text-white hover:text-gray-400"
-            to="/customers"
+            to="/shopping"
           >
-            Customers List
+            Store
           </NavLink>
           <NavLink
             className="text-white hover:text-gray-400"

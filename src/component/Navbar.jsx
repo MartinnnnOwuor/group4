@@ -42,7 +42,7 @@ function Navbar() {
             className="text-white hover:text-gray-400"
             to="/dashboard"
           >
-            Dashboard
+            Products
           </NavLink>
           <NavLink
             className="text-white hover:text-gray-400"
@@ -55,6 +55,12 @@ function Navbar() {
             to="/customers"
           >
             Customers List
+          </NavLink>
+          <NavLink
+            className="text-white hover:text-gray-400"
+            to="/contact"
+          >
+            Contact Us
           </NavLink>
         </div>
       </div>

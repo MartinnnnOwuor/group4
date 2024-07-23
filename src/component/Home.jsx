@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+
 
 function Home() {
   return (
@@ -23,10 +25,32 @@ function Home() {
             </button>
         </div>
       </div>
-      <div className=''>
+      <div className='py-10'>
         <h3 className='text-center text-2xl pt-5 font-bold'>Solutions We Offer</h3>
-        <div className='shadow-xl flex flex-col md:flex-row space-4'>
-            <h1 className='text-lg'>Electronics</h1>
+        <div className='flex flex-col md:flex-row gap-10 mx-10 justify-center py-5'>
+            <div className='shadow-xl flex flex-col p-6 bg-white rounded-xl items-center'>
+                <h1 className='text-lg text-center font-bold mb-2'>Inventory Management</h1>
+                <p className='text-center'>
+                    Efficiently track and manage your inventory o ensure the right products are always in stock.
+                </p>
+            </div>
+            <div className='shadow-xl p-6 flex flex-col items-center rounded-xl bg-white'>
+                <h1 className='text-lg text-center font-bold mb-2'>Customer Relationship Management</h1>
+                <p className='text-center'>
+                    Build and maintain strong relationships with your customers hrough personalized interactions.
+                </p>
+            </div>
+            <div className='shadow-xl flex flex-col p-6 rounded-xl bg-white items-center'>
+                <h1 className='text-lg text-center font-bold mb-2'>Payment Gateway  Integration</h1>
+                <p className='text-center'>
+                    Provide secure and seamless payment options to enhance the customer purchase experience.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div className=''>
+        <div className=''>
+            <h1 className='font-bold text-xl py-4'>Why use our products?</h1>
         </div>
       </div>
     </div>

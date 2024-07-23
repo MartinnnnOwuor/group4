@@ -1,53 +1,65 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style ">
-        <div className="container-fluid">
-        <a className="navbar-brand" href="/#">
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto flex items-center justify-between">
+        <a className="text-white text-2xl font-semibold" href="/#">
           E-Kart
         </a>
 
         <button
-          className="navbar-toggler"
+          className="text-white md:hidden flex items-center px-3 py-2 border rounded border-gray-700 hover:text-gray-400"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-      <span className="navbar-toggler-icon"></span>
+          <svg className="fill-current h-6 w-6" viewBox="0 0 24 24">
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-                <NavLink class='home' to='/home' style={{color:'white', textDecoration:'none', marginLeft:'750px'}}>
-
-                  Home
-                </NavLink>
-            </li>
-            <li  className="nav-item">
-              <NavLink class='about' style={{color:'white',textDecoration:'none',marginLeft:'50px'}} to='/about'>About</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink style={{color:'white', textDecoration:'none',marginLeft:'50px'}} to='/dashboard'>Dashboard</NavLink>
-            </li>
-            <li  className="nav-item">
-              <NavLink class='log' style={{color:'white',textDecoration:'none',marginLeft:'50px'}} to='/'>Login</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink class='list' style={{color:'white', textDecoration:'none',marginLeft:'50px'}} to='/customers'>Customers List</NavLink>
-            </li>
-          </ul>
+        <div className="hidden md:flex md:items-center md:space-x-6" id="navbarSupportedContent">
+          <NavLink
+            className="text-white hover:text-gray-400"
+            to="/home"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className="text-white hover:text-gray-400"
+            to="/about"
+          >
+            About
+          </NavLink>
+          <NavLink
+            className="text-white hover:text-gray-400"
+            to="/dashboard"
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            className="text-white hover:text-gray-400"
+            to="/"
+          >
+            Login
+          </NavLink>
+          <NavLink
+            className="text-white hover:text-gray-400"
+            to="/customers"
+          >
+            Customers List
+          </NavLink>
         </div>
       </div>
     </nav>
-  </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

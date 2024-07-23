@@ -35,50 +35,62 @@ function Login()  {
 
    
     return (
-      <div className="col-lg-9 m-3 p-2" >
-        <h4 className="text-center text-2xl font-bold mb-4">Welcome to E-Kart</h4>
+      <div className="d-flex justify-content-center align-items-center min-vh-100">
+        <div className="col-g-6 col-md-8 col-sm-10 p-4 rounded shadow">
+          <h4 className="text-center text-2xl font-bold mb-4">Welcome to E-Kart</h4>
 
-        {/* Beginning of the Email */}
-        <div className="form-group form row">
-          <label className="col-lg-4">Email:</label>
+          <div className="form-group mb-3">
+          <label htmlFor="email" className="form-label">Email:</label>
           <input
-            type="text"
+            type="email"
             className="form-control"
+            placeholder="Enter your email"
             value={logins.email}
             onChange={(event) => {
-              setLogins({ email: event.target.value });
+              setLogins({ ...logins, email: event.target.value });
             }}
           />
-        </div>
-        {/* End of Email */}
+          </div>
 
-        {/* Beginning of the Password */}
-        <div className="form-group form row">
-          <label className="col-lg-4">Password:</label>
-          <input
-            type="password"
-            className="form-control"
-            value={logins.password}
-            onChange={(event) => {
-              setLogins({ password: event.target.value });
-            }}
-          />
-        </div>
-        {/* End of Password */}
+          <div className="form-group mb-3">
+          <label htmlFor="password" className="form-label">Password:</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter your password"
+              value={logins.password}
+              onChange={(event) => {
+                setLogins({ ...logins, password: event.target.value });
+              }}
+            />
+          </div>
 
-        <div className="d-flex justify-content-center">
-          <span className="m-3 ">{logins.message}</span>
+          <div className="form-group mb-3">
+          <label htmlFor="password" className="form-label">Confirm Password:</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Confirm your password"
+              value={logins.password}
+              onChange={(event) => {
+                setLogins({ ...logins, password: event.target.value });
+              }}
+            />
+          </div>
 
-          <button className="btn btn-primary m-2 px-4 " onClick={() => {handleLogin()}}>
-            Login
-          </button>
+          <div className="text-center mb-3">
+            <span>{logins.message}</span>
+          </div>
+          <div className="d-flex justify-content-center">
+            <button className="btn btn-primary px-4 " onClick={() => {handleLogin()}}>
+              Login
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
-  //Fires when user clicks on Login button
   
-
 
 export default Login;

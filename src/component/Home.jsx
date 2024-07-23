@@ -1,40 +1,58 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+
 
 function Home() {
   return (
-    <div id='homecomponent'>
-    <div className="container" >
-      <h1 id='karttitle'className="text-center">Welcome to e-Kart where quality products speak loud!</h1>
-      <div style={{marginLeft:'100px',color:'#0000ff', fontWeight:'bold'}} >
-       <h2 className="mt-5 mb-4">Why Shop with us?</h2>
-            <ul>
-              <li>Secure checkout process</li>
-              <li>Fast and reliable shipping</li>
-              <li>Easy returns and exchanges</li>
-              <li>Customer reviews and ratings</li>
-              <li>Responsive customer support</li>
-              </ul>
-              </div>
-
-            <div style={{marginTop:'-50px', marginLeft:"890px", fontWeight:"bolder", color: "#ffff00"}}>
-              <h2 className="mt-5 mb-4"> What makes it different?</h2>
-                <ul>
-              <li>Usable with phone, tab or computer!!</li>
-              <li>Global scope</li>
-              <li>Easy navigation</li>
-              <li>No redirects</li>
-              </ul>
+    <div className=''>
+      <div className='bg-blue-100'>
+        <div className='pt-10'>
+            <h1 className='text-center text-3xl font-bold'>Welcome to the Future of Accessories:</h1>
+            <h2 className='text-center text-3xl font-bold'>E-Kart Limited</h2>
+        </div>
+        <div className='bg-gray py-2'>
+            <div className='bg-blue-100 shadow-md rounded-xl mx-auto max-w-4xl p-6'>
+                <p className='text-center text-lg mb-2'>Our advanced solutions, from seamless payment processing to ecure transactions, streamline operations, enhance customer experiences, and drive growth.</p>
+                <p className='text-center text-lg'>As industry leaders, we redefine norms and push boundaries, shaping a future where technology transforms the shopping experience.</p>
             </div>
-
-            <div style={{marginTop: "90px", color: "green", fontWeight: "bolder"}}>
-            <h2 className="mt-5 mb-4">What if its a scam?</h2>
-            <ul>
-              <li>Secure payment via MPESA, Mastercard, paypall etc</li>
-              <li>Receipts after payment to showcase recent transactions</li>
-              <li>App under Copyright Protection Law</li>
-            </ul>
+        </div>
+        <div className='flex flex-col md:flex-row justify-center py-5'>
+            <button className='bg-blue-500 text-white hover:bg-blue-600 py-3 px-4 rounded-xl mx-4'>
+                Learn More
+            </button>
+            <button className='bg-black text-white py-3 rounded-xl px-4'>
+                Let's Talk
+            </button>
+        </div>
+      </div>
+      <div className='py-10'>
+        <h3 className='text-center text-2xl pt-5 font-bold'>Solutions We Offer</h3>
+        <div className='flex flex-col md:flex-row gap-10 mx-10 justify-center py-5'>
+            <div className='shadow-xl flex flex-col p-6 bg-white rounded-xl items-center'>
+                <h1 className='text-lg text-center font-bold mb-2'>Inventory Management</h1>
+                <p className='text-center'>
+                    Efficiently track and manage your inventory o ensure the right products are always in stock.
+                </p>
             </div>
-    </div>
+            <div className='shadow-xl p-6 flex flex-col items-center rounded-xl bg-white'>
+                <h1 className='text-lg text-center font-bold mb-2'>Customer Relationship Management</h1>
+                <p className='text-center'>
+                    Build and maintain strong relationships with your customers hrough personalized interactions.
+                </p>
+            </div>
+            <div className='shadow-xl flex flex-col p-6 rounded-xl bg-white items-center'>
+                <h1 className='text-lg text-center font-bold mb-2'>Payment Gateway  Integration</h1>
+                <p className='text-center'>
+                    Provide secure and seamless payment options to enhance the customer purchase experience.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div className=''>
+        <div className=''>
+            <h1 className='font-bold text-xl py-4'>Why use our products?</h1>
+        </div>
+      </div>
     </div>
   )
 }

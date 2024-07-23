@@ -6,7 +6,6 @@ function Login()  {
   const nav = useNavigate()
 
   async function handleLogin () {
-    nav("/shopping")
     let response = await fetch(
       `https://react-server-k2ig.onrender.com/users?email=${logins.email}&password=${logins.password}`,
       { method: "GET" }
@@ -21,6 +20,7 @@ function Login()  {
       setLogins({
         message: <span className="text-success">Login successful</span>,
       });
+      nav("/shopping")
     } else {
       //if  error
       setLogins({
@@ -79,5 +79,6 @@ function Login()  {
 
   //Fires when user clicks on Login button
   
+
 
 export default Login;

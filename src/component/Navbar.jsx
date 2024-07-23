@@ -26,6 +26,7 @@ function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
                 <NavLink class='home' to='/home' style={{color:'white', textDecoration:'none', marginLeft:'750px'}}>
+
                   Home
                 </NavLink>
             </li>

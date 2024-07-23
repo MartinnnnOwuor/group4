@@ -21,6 +21,7 @@ const About = () => {
             <li>Email: <a href='#' style={{textDecoration:'none'}}>Ekart@company.com</a></li>
             <li>Phone: <a href='#'style={{textDecoration:'none'}}>123-456-7890</a></li>
             <li>Address: <a href='#'style={{textDecoration:'none'}}>123 Main Street, Nairobi, Kenya</a></li>
+            
           </ul>
           </div>
         </div>

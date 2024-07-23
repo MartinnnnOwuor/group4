@@ -10,6 +10,7 @@ const Product = ({ product, onDelete, onIncrement, onDecrement, children }) => {
 
   return (
     <div className="col-lg-6" style={{ width: "400px", marginLeft:'30px' }}>
+
       <div className="card m-2" style={{background:'#ccc'}}>
         <div className="card-body">
           <div className="text-muted" >

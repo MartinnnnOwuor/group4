@@ -7,7 +7,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style ">
         <div className="container-fluid">
         <a className="navbar-brand" href="/#">
-          #e-Kart
+          E-Kart
         </a>
 
         <button

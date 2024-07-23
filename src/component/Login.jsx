@@ -36,7 +36,7 @@ function Login()  {
    
     return (
       <div className="col-lg-9 m-3 p-2" >
-        <h4 className="border-bottom">Log-in</h4>
+        <h4 className="text-center text-2xl font-bold mb-4">Welcome to E-Kart</h4>
 
         {/* Beginning of the Email */}
         <div className="form-group form row">
@@ -66,10 +66,10 @@ function Login()  {
         </div>
         {/* End of Password */}
 
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-center">
           <span className="m-3 ">{logins.message}</span>
 
-          <button className="btn btn-primary m-2" onClick={() => {handleLogin()}}>
+          <button className="btn btn-primary m-2 px-4 " onClick={() => {handleLogin()}}>
             Login
           </button>
         </div>

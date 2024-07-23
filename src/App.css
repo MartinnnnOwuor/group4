@@ -148,3 +148,43 @@ h5 {
 .login:hover{
   cursor: pointer;
 }
+
+.card-mission {
+  background-color: #cfe2ff;
+  transition: background-color 0.3s ease-in-out;
+}
+.card-mission:hover {
+  background-color: #bdd7ee;
+}
+
+.card-vision {
+  background-color: #e2f0d9;
+  transition: background-color 0.3s ease-in-out;
+}
+.card-vision:hover {
+  background-color: #c3e6cb;
+}
+
+.card-quality {
+  background-color: #fff3cd;
+  transition: background-color 0.3s ease-in-out;
+}
+.card-quality:hover {
+  background-color: #ffeeba;
+}
+
+.card-reliability {
+  background-color: #d4edda;
+  transition: background-color 0.3s ease-in-out;
+}
+.card-reliability:hover {
+  background-color: #c3e6cb;
+}
+
+.card-price {
+  background-color: #f8d7da;
+  transition: background-color 0.3s ease-in-out;
+}
+.card-price:hover {
+  background-color: #f5c6cb;
+}

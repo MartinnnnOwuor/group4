@@ -4,7 +4,7 @@ import { faFacebook, faXTwitter, faInstagram, faLinkedin } from '@fortawesome/fr
 
 function Footer() {
   return (
-    <footer className='bg-gray-200 py-10'>
+    <footer className='bg-gray-300 py-10'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col md:flex-row justify-between'>
           <div className='mb-6 md:mb-0 md:w-1/3 '>
@@ -44,7 +44,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-          <div className='py-4 mt-10'>
+          <div className=' -500 py-4 mt-10'>
             <div className='container mx-auto text-center text-gray-600'>
               All Rights Reserved. &copy;{new Date().getFullYear()} E-Kart Limited
             </div>

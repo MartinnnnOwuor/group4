@@ -25,10 +25,10 @@ function Home() {
             </div>
         </div>
         <div className='flex flex-col md:flex-row justify-center py-5'>
-            <button className='bg-blue-500 text-white hover:bg-blue-600 py-3 px-4 rounded-xl mx-4'>
+            <button className='bg-blue-500 text-white hover:bg-blue-600 py-3 px-3 rounded-xl mx-4 mt-4'>
                 Learn More
             </button>
-            <button className='bg-black text-white py-3 rounded-xl px- mx-4 mt-4'>
+            <button className='bg-black text-white py-3 rounded-xl px-3 mx-4 mt-4'>
                 Let's Talk
             </button>
         </div>

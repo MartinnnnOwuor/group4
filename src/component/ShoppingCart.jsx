@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Product from "./Product";
+import Footer from "./Footer";
 
 const ShoppingCart = () => {
   const [products, setProducts] = useState([]);
@@ -74,6 +75,7 @@ const ShoppingCart = () => {
           </Product>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

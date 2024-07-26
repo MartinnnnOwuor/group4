@@ -28,7 +28,7 @@ function Navbar() {
         <div className="hidden md:flex md:items-center md:space-x-6" id="navbarSupportedContent">
           <NavLink
             className="text-white hover:text-gray-400"
-            to="/home"
+            to="/"
           >
             Home
           </NavLink>
@@ -46,7 +46,7 @@ function Navbar() {
           </NavLink>
           <NavLink
             className="text-white hover:text-gray-400"
-            to="/"
+            to="/login"
           >
             Login
           </NavLink>

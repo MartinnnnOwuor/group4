@@ -1,9 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullseye, faEye, faStar, faCheck, faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import Footer from './Footer';
 
 function About() {
   return (
+    <>
     <div className='container mx-auto px-4 py-8 bg-gray-50'>
       <div className='text-center mb-12'>
         <h2 className='text-2xl font-bold'>Who We Are</h2>
@@ -59,6 +61,8 @@ function About() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -59,7 +59,7 @@ const ShoppingCart = () => {
 
   return (
     <div className="container-fluid" style={{background:'#cccc'}}>
-      <h4 style={{textAlign:'center', fontSize:'24px',padding:'7px'}}>Welcome to Shopping #Kart retail therapy at its finest</h4>
+      <h4 style={{textAlign:'center', fontSize:'24px',padding:'7px'}}>Welcome to E-Kart retail therapy at its finest</h4>
       <p style={{textAlign:'center', fontSize:'18px', color:'blueviolet'}}>Bringing home a cart full of happiness</p>
       <div className="row">
         {products.map((item) => (

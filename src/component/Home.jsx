@@ -10,7 +10,7 @@ function Home() {
       <div 
       className='bg-blue-100 p-10'
       style={{
-        backgroundImage: 'url("https://media.istockphoto.com/id/1061369956/photo/coin-stacks-and-chart-graphs-on-a-chessboard.webp?b=1&s=170667a&w=0&k=20&c=zcumQNaDUpaKYiQDLiNTn0bGOIETe8rXIicHH0jcHpU=")',
+        backgroundImage: 'url("")',
         backgroundSize:'cover',
         backgroundPosition:'center'
       }}>
@@ -19,7 +19,7 @@ function Home() {
             <h2 className='text-center text-3xl font-bold'>E-Kart Limited</h2>
         </div>
         <div className='bg-gray py-2'>
-            <div className='bg-indigo-200 shadow-md rounded-xl mx-auto max-w-4xl p-6'>
+            <div className='rounded-xl mx-auto max-w-4xl p-6'>
                 <p className='text-center text-lg mb-2'>Our advanced solutions, from seamless payment processing to ecure transactions, streamline operations, enhance customer experiences, and drive growth.</p>
                 <p className='text-center text-lg'>As industry leaders, we redefine norms and push boundaries, shaping a future where technology transforms the shopping experience.</p>
             </div>

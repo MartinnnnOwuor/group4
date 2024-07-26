@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className=" fixed left-0 top-0 w-full bg-blue-100 p-4">
       <div className="container mx-auto flex items-center justify-between">
-        <a className="text-white text-2xl font-semibold" href="/#">
-          E-Kart
+        <a className="text text-2xl font-semibold" href="/#">
+          E-Kart Limited
         </a>
 
         <button
@@ -27,37 +27,37 @@ function Navbar() {
 
         <div className="hidden md:flex md:items-center md:space-x-6" id="navbarSupportedContent">
           <NavLink
-            className="text-white hover:text-gray-400"
-            to="/home"
+            className="hover:text-violet-700"
+            to="/"
           >
             Home
           </NavLink>
           <NavLink
-            className="text-white hover:text-gray-400"
+            className="text hover:text-violet-700"
             to="/about"
           >
             About
           </NavLink>
           <NavLink
-            className="text-white hover:text-gray-400"
+            className="text hover:text-violet-700"
             to="/dashboard"
           >
             Products
           </NavLink>
           <NavLink
-            className="text-white hover:text-gray-400"
-            to="/"
+            className="text hover:text-violet-700"
+            to="/login"
           >
             Login
           </NavLink>
           <NavLink
-            className="text-white hover:text-gray-400"
+            className="text hover:text-violet-700"
             to="/shopping"
           >
             Store
           </NavLink>
           <NavLink
-            className="text-white hover:text-gray-400"
+            className="text hover:text-violet-700"
             to="/contact"
           >
             Contact Us

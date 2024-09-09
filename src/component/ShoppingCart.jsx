@@ -8,7 +8,9 @@ const ShoppingCart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://react-server-k2ig.onrender.com/products");
+        const response = await fetch(
+          "https://react-server-k2ig.onrender.com/products"
+        );
         const responseData = await response.json();
         setProducts(responseData);
       } catch (error) {
@@ -51,16 +53,20 @@ const ShoppingCart = () => {
   const handlePurchase = (product) => {
     if (window.confirm(`you've successfully purchased your product`)) {
       const updatedProducts = products.map((p) =>
-         p.id !== product.id ? { ...p, purchased: true} : p
-    );
+        p.id !== product.id ? { ...p, purchased: true } : p
+      );
       setProducts(updatedProducts);
     }
   };
 
   return (
-    <div className="container-fluid" style={{background:'#cccc'}}>
-      <h4 style={{textAlign:'center', fontSize:'24px',padding:'7px'}}>Welcome to E-Kart retail therapy at its finest</h4>
-      <p style={{textAlign:'center', fontSize:'18px', color:'blueviolet'}}>Bringing home a cart full of happiness</p>
+    <div className="container-fluid" style={{ background: "#cccc" }}>
+      <h4 style={{ textAlign: "center", fontSize: "24px", padding: "7px" }}>
+        Welcome to E-Kart retail therapy at its finest
+      </h4>
+      <p style={{ textAlign: "center", fontSize: "18px", color: "blueviolet" }}>
+        Bringing home a cart full of happiness
+      </p>
       <div className="row">
         {products.map((item) => (
           <Product
@@ -71,11 +77,13 @@ const ShoppingCart = () => {
             onDelete={handleDelete}
             onPurchase={handlePurchase}
           >
-            <button className="btn btn-primary" onClick={handlePurchase}>Purchase</button>
+            <button className="btn btn-primary" onClick={handlePurchase}>
+              Purchase
+            </button>
           </Product>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
